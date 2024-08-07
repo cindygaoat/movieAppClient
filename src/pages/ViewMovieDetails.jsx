@@ -57,11 +57,9 @@ const ViewMovieDetails = () => {
             {success && <Alert variant="success">{success}</Alert>}
             {error && <Alert variant="danger">{error}</Alert>}
             <ListGroup className="mb-4">
-            {/* {(comments.length === 0 && user.isAdmin) ? */}
+            {(comments.length === 0 ) &&
                 <h5 className='my-5'>No comments on this post.</h5>
-                {/* : */}
-                {/* <h5 className='my-5'>Be the first to comment.</h5> */}
-            {/* } */}
+            }
                 {comments.map(comment => (
                     <ListGroup.Item key={comment._id}>
                         {comment.comment}
