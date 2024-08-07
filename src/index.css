@@ -3,6 +3,14 @@
   padding: 0;
 }
 
+.navbar-custom .nav-link {
+  color: #f8f9fa; /* Light color for text */
+}
+
+.navbar-custom .nav-link:hover {
+  color: #e9ecef; /* Slightly different light color for hover effect */
+}
+
 /*:root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

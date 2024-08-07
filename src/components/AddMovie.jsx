@@ -77,7 +77,7 @@ const AddMovie = ({ fetchData }) => {
             <Modal show={showEdit} onHide={closeEdit}>
                 <Form onSubmit={handleUpdate}>
                     <Modal.Header closeButton>
-                        <Modal.Title>Edit Product</Modal.Title>
+                        <Modal.Title>Add Movie</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
                         <Form.Group controlId="movieTitle">

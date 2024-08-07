@@ -39,7 +39,7 @@ export default function MoviesAdmin() {
 
 	return (
 		<>
-			<Table striped bordered hover className="text-center">
+			<Table striped bordered hover className="text-center mt-5">
 	      	<thead>
 	        <tr>
 	          <th>Title</th>

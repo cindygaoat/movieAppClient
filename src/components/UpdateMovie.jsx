@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Button, Modal, Form } from 'react-bootstrap';
 import Swal from 'sweetalert2';
 
-const UpdateProduct = ({ movie, fetchData }) => {
+const UpdateMovie = ({ movie, fetchData }) => {
     const [showEdit, setShowEdit] = useState(false);
     const [title, setTitle] = useState(movie.title)
     const [director, setDirector] = useState(movie.director)
@@ -30,7 +30,13 @@ const UpdateProduct = ({ movie, fetchData }) => {
                 'Content-Type': 'application/json',
                 Authorization: `Bearer ${localStorage.getItem('token')}`
             },
-            body: JSON.stringify({ title, director, year, description, genre })
+            body: JSON.stringify({ 
+                title: title, 
+                director: director, 
+                year: year, 
+                description: description, 
+                genre: genre  
+            })
         })
         .then(res => res.json())
         .then(data => {
@@ -59,7 +65,7 @@ const UpdateProduct = ({ movie, fetchData }) => {
             <Modal show={showEdit} onHide={closeEdit}>
                 <Form onSubmit={handleUpdate}>
                     <Modal.Header closeButton>
-                        <Modal.Title>Edit Product</Modal.Title>
+                        <Modal.Title>Edit Movie</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
                         <Form.Group controlId="movieTitle">
@@ -131,4 +137,4 @@ const UpdateProduct = ({ movie, fetchData }) => {
     );
 };
 
-export default UpdateProduct;
+export default UpdateMovie;

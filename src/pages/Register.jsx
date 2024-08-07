@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from 'react';
+import { useState, useEffect, useContext, useNavigate } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import { Navigate } from 'react-router-dom';
 
@@ -54,6 +54,7 @@ export default function Register() {
                 setPassword("");
                 setConfirmPassword("");
                 alert("Registration succesful");
+                navigate('/login')
             }else if(data.error === "Email invalid"){
                 alert("Email is invalid");
             }else if(data.error === "Password must be atleast 8 characters"){

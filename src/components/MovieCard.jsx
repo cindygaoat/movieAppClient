@@ -2,6 +2,7 @@ import { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Card, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import ViewMovieDetails from '../pages/ViewMovieDetails';
 
 export default function MovieCard(props) {
     console.log(props.movieProp);
